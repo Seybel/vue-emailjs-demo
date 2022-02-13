@@ -48,7 +48,6 @@ export default {
           email: this.email,
           message: this.meessage
         })
-        console.log('it works!!!')
 
       } catch (error) {
           console.log({error})
