@@ -49,8 +49,12 @@ export default {
           message: this.meessage
         })
 
-      } catch (error) {
-          console.log({error})
+      } catch (err) {
+           if (err instanceof ReferenceError) {
+            alert( "JSON Error: " + err.message );
+           } else {
+            throw err; // rethrow
+           }
       }
       // Reset form field
       this.name = ''
